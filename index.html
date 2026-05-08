@@ -17,11 +17,14 @@ body{
     line-height:1.8;
 }
 
+/* HERO */
 .hero{
     background:linear-gradient(135deg,#5b6cff,#7dd3fc);
     color:white;
     text-align:center;
-    padding:90px 20px;
+    padding:100px 20px;
+
+    animation: fadeDown 1s ease-out;
 }
 
 .hero h1{
@@ -44,20 +47,41 @@ body{
     font-weight:700;
     border-radius:999px;
     text-decoration:none;
+    transition:0.3s ease;
 }
 
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* CONTAINER */
 .container{
     max-width:1000px;
     margin:auto;
     padding:60px 20px;
 }
 
+/* CARD */
 .card{
     background:white;
     padding:30px;
     margin-bottom:25px;
     border-radius:16px;
     box-shadow:0 8px 20px rgba(0,0,0,0.05);
+
+    opacity:0;
+    transform:translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.card:nth-child(1){animation-delay:0.1s;}
+.card:nth-child(2){animation-delay:0.2s;}
+.card:nth-child(3){animation-delay:0.3s;}
+.card:nth-child(4){animation-delay:0.4s;}
+
+.card:hover{
+    transform:translateY(-5px);
+    transition:0.3s ease;
 }
 
 .card h2{
@@ -71,21 +95,28 @@ body{
     border-top:1px solid #e6e6e6;
 }
 
-.method-img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:12px;
-    margin-bottom:15px;
+/* ANIMATIONS */
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-footer{
-    text-align:center;
-    padding:40px;
-    background:#eef1ff;
-    margin-top:60px;
-    font-size:14px;
-    color:#666;
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* smooth scroll */
+html{
+    scroll-behavior:smooth;
 }
 
 </style>
@@ -100,7 +131,6 @@ footer{
 <p>
 Jei ne - nesijaudink, sužinok, kaip tavo smegenys geriausiai įsisavina naują kalbą ir kokie metodai tau veikia efektyviausiai.
 Atlik trumpą testą ir išsiaiškink koks mokymosi tipas TAU tinka labiausiai ir pradėk kalbų mokytis efektyviai!
-TESTAS (nuoroda į jį typeforme)
 </p>
 
 <a class="btn" href="https://form.typeform.com/to/nb0DBGvb" target="_blank">
@@ -111,16 +141,9 @@ TESTAS
 
 <div class="container">
 
-<!-- 1 -->
 <div class="card">
-
-<img class="method-img" src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="books">
-
 <h2>STRUKTŪRINIS METODAS</h2>
-
-<p>
-Struktūrinis mokymasis remiasi aiškia sistema, taisyklėmis ir loginiu kalbos supratimu. Šio metodo esmė – ne tik įsiminti žodžius ar frazes, bet ir suprasti, kaip veikia pati kalba. Žmonės, kuriems artimas šis mokymosi būdas, dažniausiai mėgsta tvarką, planą ir aiškų progresą. Mokantis šiuo metodu daug dėmesio skiriama gramatikai, sakinių struktūrai, laikams, taisyklėms bei jų taikymui praktikoje. Dažnai naudojami pratimai, užduotys, rašymas ir analizė. Tokie mokiniai dažnai jaučiasi saugiau tada, kai žino „teisingą“ atsakymą ir supranta, kodėl jis yra teisingas.
-</p>
+<p>Struktūrinis mokymasis remiasi aiškia sistema, taisyklėmis ir loginiu kalbos supratimu. Šio metodo esmė – ne tik įsiminti žodžius ar frazes, bet ir suprasti, kaip veikia pati kalba. Žmonės, kuriems artimas šis mokymosi būdas, dažniausiai mėgsta tvarką, planą ir aiškų progresą. Mokantis šiuo metodu daug dėmesio skiriama gramatikai, sakinių struktūrai, laikams, taisyklėms bei jų taikymui praktikoje. Dažnai naudojami pratimai, užduotys, rašymas ir analizė. Tokie mokiniai dažnai jaučiasi saugiau tada, kai žino „teisingą“ atsakymą ir supranta, kodėl jis yra teisingas.</p>
 
 <div class="block">
 Dažniausiai naudojama:<br>
@@ -129,19 +152,11 @@ Gramatikos užduočių lapai<br>
 Užduotys iš pratybų<br>
 Struktūrizuotas ir konkretus mokymosi planas
 </div>
-
 </div>
 
-<!-- 2 PAKEISTA -->
 <div class="card">
-
-<img class="method-img" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="people conversation">
-
 <h2>KOMUNIKACIJOS METODAS</h2>
-
-<p>
-Komunikacinio mokymosi pagrindas – kalbėjimas ir bendravimas. Šis metodas orientuotas į realų kalbos naudojimą, o ne tobulą taisyklių mokėjimą. Svarbiausia yra gebėti susikalbėti, net jei daromos klaidos. Žmonės, kuriems artimas šis metodas, dažniausiai mokosi aktyviai kalbėdami su kitais, klausydamiesi gyvų pokalbių ir dalyvaudami situacijose, kuriose reikia naudoti kalbą. Jie dažnai greičiau įgauna pasitikėjimo savimi ir mažiau bijo suklysti. Komunikacinis metodas remiasi idėja, kad kalbos geriausiai išmokstama ją naudojant. Todėl mokymasis vyksta per dialogus, diskusijas, grupines veiklas, vaidmenų žaidimus ir realias situacijas.
-</p>
+<p>Komunikacinio mokymosi pagrindas – kalbėjimas ir bendravimas. Šis metodas orientuotas į realų kalbos naudojimą, o ne tobulą taisyklių mokėjimą. Svarbiausia yra gebėti susikalbėti, net jei daromos klaidos. Žmonės, kuriems artimas šis metodas, dažniausiai mokosi aktyviai kalbėdami su kitais, klausydamiesi gyvų pokalbių ir dalyvaudami situacijose, kuriose reikia naudoti kalbą. Jie dažnai greičiau įgauna pasitikėjimo savimi ir mažiau bijo suklysti. Komunikacinis metodas remiasi idėja, kad kalbos geriausiai išmokstama ją naudojant. Todėl mokymasis vyksta per dialogus, diskusijas, grupines veiklas, vaidmenų žaidimus ir realias situacijas.</p>
 
 <div class="block">
 Dažniausiai naudojama:<br>
@@ -150,19 +165,11 @@ Kelionės ir praktika realiose situacijose<br>
 Bendravimo užduotys<br>
 Dialogai
 </div>
-
 </div>
 
-<!-- 3 PAKEISTA -->
 <div class="card">
-
-<img class="method-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="movie computer">
-
 <h2>IMERSIJOS METODAS</h2>
-
-<p>
-Įtraukiantis mokymasis, dar vadinamas immersija, remiasi natūraliu kalbos „pasinėrimu“. Žmogus mokosi nuolat būdamas apsuptas kalbos – klausydamas muzikos, žiūrėdamas filmus, skaitydamas turinį ar naudodamas socialinius tinklus kita kalba. Šio metodo esmė – ne mokytis dirbtinai, o priprasti prie kalbos taip, kaip vaikai pripranta prie gimtosios kalbos. Informacija įsisavinama per kontekstą, pasikartojimus ir nuolatinį kontaktą su realiu turiniu. Žmonės, kuriems tinka šis metodas, dažnai nemėgsta sausos teorijos ar gramatikos taisyklių. Jie geriau mokosi „jausdami“ kalbą ir stebėdami, kaip ji naudojama realybėje.
-</p>
+<p>Įtraukiantis mokymasis, dar vadinamas immersija, remiasi natūraliu kalbos „pasinėrimu“. Žmogus mokosi nuolat būdamas apsuptas kalbos – klausydamas muzikos, žiūrėdamas filmus, skaitydamas turinį ar naudodamas socialinius tinklus kita kalba. Šio metodo esmė – ne mokytis dirbtinai, o priprasti prie kalbos taip, kaip vaikai pripranta prie gimtosios kalbos. Informacija įsisavinama per kontekstą, pasikartojimus ir nuolatinį kontaktą su realiu turiniu. Žmonės, kuriems tinka šis metodas, dažnai nemėgsta sausos teorijos ar gramatikos taisyklių. Jie geriau mokosi „jausdami“ kalbą ir stebėdami, kaip ji naudojama realybėje.</p>
 
 <div class="block">
 Dažniausiai naudojama:<br>
@@ -171,19 +178,11 @@ Tinklalaidės<br>
 Muzika<br>
 Bendravimas gyvai
 </div>
-
 </div>
 
-<!-- 4 PAKEISTA -->
 <div class="card">
-
-<img class="method-img" src="https://images.unsplash.com/photo-1557683316-973673baf926" alt="flashcards learning">
-
 <h2>KARTOJIMO METODAS</h2>
-
-<p>
-Kartojimo metodas remiasi nuolatiniu informacijos kartojimu, kol ji tampa automatinė. Šio metodo esmė – dažnas kontaktas su ta pačia informacija, kad žodžiai, frazės ar taisyklės ilgam išliktų atmintyje. Žmonės, kuriems tinka šis mokymosi būdas, dažnai geriausiai įsimena informaciją ją nuolat peržiūrėdami, kartodami ir praktikuodami mažomis dalimis. Jiems svarbus reguliarumas ir rutina. Šis metodas dažnai naudojamas mokantis žodyną, tarimą ar pagrindines frazes. Ypač populiarus yra „spaced repetition“ principas, kai informacija kartojama tam tikrais intervalais tam, kad ji geriau įsitvirtintų ilgalaikėje atmintyje.
-</p>
+<p>Kartojimo metodas remiasi nuolatiniu informacijos kartojimu, kol ji tampa automatinė. Šio metodo esmė – dažnas kontaktas su ta pačia informacija, kad žodžiai, frazės ar taisyklės ilgam išliktų atmintyje. Žmonės, kuriems tinka šis mokymosi būdas, dažnai geriausiai įsimena informaciją ją nuolat peržiūrėdami, kartodami ir praktikuodami mažomis dalimis. Jiems svarbus reguliarumas ir rutina. Šis metodas dažnai naudojamas mokantis žodyną, tarimą ar pagrindines frazes. Ypač populiarus yra „spaced repetition“ principas, kai informacija kartojama tam tikrais intervalais tam, kad ji geriau įsitvirtintų ilgalaikėje atmintyje.</p>
 
 <div class="block">
 Dažniausiai naudojama:<br>
@@ -192,7 +191,6 @@ Kartojimo kortelės (angliškai - flashcards)<br>
 Kasdieniai testai<br>
 Kartojimo pratimai
 </div>
-
 </div>
 
 </div>
