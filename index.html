@@ -15,6 +15,7 @@ body{
     font-family:'Inter', sans-serif;
     background:#f5f7ff;
     color:#1d1d1f;
+    line-height:1.8;
 }
 
 /* HERO */
@@ -22,11 +23,11 @@ body{
     background: linear-gradient(135deg,#5b6cff,#7dd3fc);
     color:white;
     text-align:center;
-    padding:110px 20px;
+    padding:100px 20px;
 }
 
 .hero h1{
-    font-size:46px;
+    font-size:44px;
     margin-bottom:25px;
 }
 
@@ -34,40 +35,33 @@ body{
     max-width:850px;
     margin:auto;
     font-size:18px;
-    line-height:1.8;
     opacity:0.95;
 }
 
 /* BUTTON */
 .btn{
     display:inline-block;
-    margin-top:35px;
-    padding:18px 55px;
+    margin-top:30px;
+    padding:16px 50px;
     background:white;
     color:#5b6cff;
     font-weight:700;
     border-radius:999px;
     text-decoration:none;
     font-size:18px;
-    transition:0.3s;
-    box-shadow:0 10px 20px rgba(0,0,0,0.15);
-}
-
-.btn:hover{
-    transform:translateY(-3px);
 }
 
 /* SECTION */
 .container{
     max-width:1100px;
     margin:auto;
-    padding:80px 20px;
+    padding:70px 20px;
 }
 
 .title{
     text-align:center;
-    font-size:34px;
-    margin-bottom:60px;
+    font-size:32px;
+    margin-bottom:50px;
 }
 
 /* CARD */
@@ -77,12 +71,6 @@ body{
     margin-bottom:35px;
     border-radius:18px;
     box-shadow:0 10px 30px rgba(0,0,0,0.06);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 40px rgba(0,0,0,0.1);
 }
 
 .card h2{
@@ -90,12 +78,11 @@ body{
     margin-top:0;
 }
 
-/* FIXED SEPARATION FOR "DAŽNIAUSIAI NAUDOJAMA" */
-.break-block{
-    margin-top:25px;
-    padding-top:20px;
+/* IMPORTANT FIX */
+.block{
+    margin-top:18px;
+    padding-top:18px;
     border-top:1px solid #e6e8f0;
-    line-height:1.7;
 }
 
 /* FOOTER */
@@ -119,8 +106,6 @@ footer{
 <h1>Ar Tu žinai kaip geriausiai mokytis kalbų?</h1>
 
 <p>
-Pati pradžia didesnėmis raidėmis  
-Ar Tu žinai kaip geriausiai mokytis kalbų?  
 Jei ne - nesijaudink, sužinok, kaip tavo smegenys geriausiai įsisavina naują kalbą ir kokie metodai tau veikia efektyviausiai.  
 Atlik trumpą testą ir išsiaiškink koks mokymosi tipas TAU tinka labiausiai ir pradėk kalbų mokytis efektyviai!
 </p>
@@ -140,10 +125,13 @@ TESTAS
 <h2>STRUKTŪRINIS METODAS</h2>
 
 <p>
-Struktūrinis mokymasis remiasi aiškia sistema, taisyklėmis ir loginiu kalbos supratimu. Šio metodo esmė – ne tik įsiminti žodžius ar frazes, bet ir suprasti, kaip veikia pati kalba. Žmonės, kuriems artimas šis mokymosi būdas, dažniausiai mėgsta tvarką, planą ir aiškų progresą. Mokantis šiuo metodu daug dėmesio skiriama gramatikai, sakinių struktūrai, laikams, taisyklėms bei jų taikymui praktikoje. Dažnai naudojami pratimai, užduotys, rašymas ir analizė. Tokie mokiniai dažnai jaučiasi saugiau tada, kai žino „teisingą“ atsakymą ir supranta, kodėl jis yra teisingas.
+Ar Tu žinai kaip geriausiai mokytis kalbų?
+Jei ne - nesijaudink, sužinok, kaip tavo smegenys geriausiai įsisavina naują kalbą ir kokie metodai tau veikia efektyviausiai.
+Atlik trumpą testą ir išsiaiškink koks mokymosi tipas TAU tinka labiausiai ir pradėk kalbų mokytis efektyviai!
+TESTAS (nuoroda į jį typeforme)
 </p>
 
-<div class="break-block">
+<div class="block">
 Dažniausiai naudojama:<br>
 Vadovėliuose esanti informacija<br>
 Gramatikos užduočių lapai<br>
@@ -158,13 +146,13 @@ Struktūrizuotas ir konkretus mokymosi planas
 <h2>KOMUNIKACIJOS METODAS</h2>
 
 <p>
-Komunikacinio mokymosi pagrindas – kalbėjimas ir bendravimas. Šis metodas orientuotas į realų kalbos naudojimą, o ne tobulą taisyklių mokėjimą. Svarbiausia yra gebėti susikalbėti, net jei daromos klaidos. Žmonės, kuriems artimas šis metodas, dažniausiai mokosi aktyviai kalbėdami su kitais, klausydamiesi gyvų pokalbių ir dalyvaudami situacijose, kuriose reikia naudoti kalbą. Jie dažnai greičiau įgauna pasitikėjimo savimi ir mažiau bijo suklysti. Komunikacinis metodas remiasi idėja, kad kalbos geriausiai išmokstama ją naudojant.
+Komunikacinio mokymosi pagrindas – kalbėjimas ir bendravimas...
 </p>
 
-<div class="break-block">
+<div class="block">
 Dažniausiai naudojama:<br>
-Pokalbiai gyvai arba nuotoliu<br>
-Kelionės<br>
+Pokalbiai su žmonėmis gyvai arba nuotoliu<br>
+Kelionės ir praktika realiose situacijose<br>
 Bendravimo užduotys<br>
 Dialogai
 </div>
@@ -176,15 +164,15 @@ Dialogai
 <h2>IMERSIJOS METODAS</h2>
 
 <p>
-Įtraukiantis mokymasis remiasi natūraliu kalbos pasinėrimu. Žmogus mokosi klausydamas muzikos, žiūrėdamas filmus, skaitydamas turinį ar naudodamas socialinius tinklus kita kalba.
+Įtraukiantis mokymasis...
 </p>
 
-<div class="break-block">
+<div class="block">
 Dažniausiai naudojama:<br>
 Filmai, serialai<br>
 Tinklalaidės<br>
 Muzika<br>
-Bendravimas
+Bendravimas gyvai
 </div>
 
 </div>
@@ -194,13 +182,13 @@ Bendravimas
 <h2>KARTOJIMO METODAS</h2>
 
 <p>
-Kartojimo metodas remiasi nuolatiniu informacijos kartojimu, kol ji tampa automatinė. Tai padeda informacijai išlikti ilgalaikėje atmintyje.
+Kartojimo metodas...
 </p>
 
-<div class="break-block">
+<div class="block">
 Dažniausiai naudojama:<br>
-Flashcards<br>
-Programėlės<br>
+Kartojimo kortelės (angliškai - flashcards)<br>
+Žodžių/ kalbų mokymosi programėlės<br>
 Kasdieniai testai<br>
 Kartojimo pratimai
 </div>
@@ -210,7 +198,7 @@ Kartojimo pratimai
 </div>
 
 <footer>
-Kalbų mokymosi metodų projektas
+Kalbų mokymosi projektas
 </footer>
 
 </body>
