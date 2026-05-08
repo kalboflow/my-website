@@ -19,21 +19,10 @@ body{
     transition:0.3s ease;
 }
 
-/* 🔵 DARK MODE (GRĄŽINTAS GRADIENTAS) */
+/* DARK MODE */
 body.dark{
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    background:#05070f;
     color:#e5e7eb;
-}
-
-/* PROGRESS */
-#progress{
-    position:fixed;
-    top:0;
-    left:0;
-    height:4px;
-    width:0%;
-    background:#5b6cff;
-    z-index:9999;
 }
 
 /* HERO */
@@ -41,14 +30,26 @@ body.dark{
     background:linear-gradient(135deg,#5b6cff,#7dd3fc);
     color:white;
     text-align:center;
-    padding:120px 20px;
+
+    padding:90px 20px;
+    max-width:900px;
+    margin:40px auto;
+    border-radius:24px;
+
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,0.15);
 }
 
-/* 🔥 LABAI DIDELIS HEADLINE */
+/* DARK HERO */
+body.dark .hero{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+}
+
+/* HEADLINE */
 .hero h1{
     font-size:52px;
     max-width:900px;
@@ -57,15 +58,10 @@ body.dark{
     font-weight:800;
 }
 
-/* HERO TEXT */
+/* TEXT */
 .hero p{
     font-size:18px;
     max-width:700px;
-}
-
-/* DARK HERO HEADLINE (optional subtiliai) */
-body.dark .hero h1{
-    color:#ffffff;
 }
 
 /* BADGES */
@@ -94,11 +90,6 @@ body.dark .hero h1{
     font-weight:700;
     border-radius:999px;
     text-decoration:none;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
 }
 
 /* SWITCH */
@@ -151,14 +142,6 @@ input:checked + .slider::before{
     padding:60px 20px;
 }
 
-/* SECTION TITLE */
-.section-intro{
-    text-align:center;
-    font-weight:700;
-    font-size:28px;
-    margin-bottom:50px;
-}
-
 /* CARD */
 .card{
     background:white;
@@ -166,7 +149,6 @@ input:checked + .slider::before{
     margin-bottom:25px;
     border-radius:16px;
     box-shadow:0 8px 20px rgba(0,0,0,0.05);
-    transition:0.3s;
 }
 
 body.dark .card{
@@ -184,40 +166,10 @@ body.dark .card{
     border-top:1px solid #e6e6e6;
 }
 
-/* ANIMATION */
-.card{
-    opacity:0;
-    transform:translateY(40px);
-}
-
-.card.show{
-    opacity:1;
-    transform:translateY(0);
-    transition:0.7s ease;
-}
-
-/* HOVER */
-.card:hover{
-    transform:translateY(-6px) scale(1.01);
-    box-shadow:0 15px 35px rgba(0,0,0,0.12);
-}
-
-/* MOBILE */
-@media (max-width:768px){
-    .hero{padding:80px 15px;}
-    .hero h1{font-size:34px;}
-    .hero p{font-size:16px;}
-    .btn{width:90%; display:block; margin:auto;}
-}
-
-html{scroll-behavior:smooth;}
-
 </style>
 </head>
 
 <body>
-
-<div id="progress"></div>
 
 <div class="switch">
     <span>Tamsus režimas</span>
@@ -229,7 +181,6 @@ html{scroll-behavior:smooth;}
 
 <div class="hero">
 
-<!-- 🔥 DIDŽIAUSIAS HEADLINE -->
 <h1>Ar Tu žinai kaip geriausiai mokytis kalbų?</h1>
 
 <p>
@@ -255,7 +206,7 @@ TESTAS
 Sužinok daugiau apie Tau tinkantį kalbų mokymosi metodą
 </p>
 
-<!-- VISAS TAVO TURINYS LIEKA TAS PATS -->
+<!-- ✅ GRĄŽINTAS VISAS TAVO TEKSTAS -->
 
 <div class="card">
 <h2>STRUKTŪRINIS METODAS</h2>
@@ -310,29 +261,6 @@ Kartojimo pratimai
 </div>
 
 </div>
-
-<script>
-
-const cards = document.querySelectorAll(".card");
-
-const observer = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-        if(e.isIntersecting){
-            e.target.classList.add("show");
-        }
-    });
-},{threshold:0.15});
-
-cards.forEach(c=>observer.observe(c));
-
-window.addEventListener("scroll", ()=>{
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolled = (winScroll / height) * 100;
-    document.getElementById("progress").style.width = scrolled + "%";
-});
-
-</script>
 
 </body>
 </html>
